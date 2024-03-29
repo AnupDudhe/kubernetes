@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod 
 metadata: 
-  name: prodPod
+  name: prodpod
   namespace: dev
   labels:   
     app: myapp 
