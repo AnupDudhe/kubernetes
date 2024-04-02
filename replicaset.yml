@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind:  ReplicaSet
+metadata: 
+  name: rs
+  labels:
+    app: rsapp
+spec:
+    selector: 
+      matchExpression:      
+        { key: app, operator: In , [labels: rsapp     ]}
+    #matchLabels: 
+    replicas: 4
+    template:
+      metadata:
+        labels:
+          name: nginxapp
+          app: rpcapp
+      spec:
+        containers:
+          - name: nginxapp
+            image: nginx:latest 
+            ports:
+                - containerPort: 80
+                  protocol: TCP
