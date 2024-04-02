@@ -7,7 +7,7 @@ metadata:
 spec:
     selector: 
       matchExpressions:      
-       - { key: app, operator: In , values: [rsapp]}
+       - { key: app, operator: In , values: [rsapp,  new-app]}
     #matchLabels: 
     replicas: 4
     template:
