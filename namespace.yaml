@@ -1,0 +1,6 @@
+apiVersion: V1
+kind:  Namespace
+metadata:
+    name: b24ns
+    labels:
+      app: b24ns  
