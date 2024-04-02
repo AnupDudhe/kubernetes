@@ -3,7 +3,7 @@ kind:  ReplicaSet
 metadata: 
   name: rs
   labels:
-    app: rsapp1
+    app: rsapp
 spec:
     selector: 
       matchExpressions:      
@@ -16,7 +16,7 @@ spec:
       metadata:
         labels:
           name: nginxapp
-          app: new-app
+          app: rsapp
       spec:
         containers:
           - name: nginxapp
