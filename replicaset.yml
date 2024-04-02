@@ -3,7 +3,7 @@ kind:  ReplicaSet
 metadata: 
   name: rs
   labels:
-    app: rsapp
+    app: rsapp1
 spec:
     selector: 
       matchExpressions:      
