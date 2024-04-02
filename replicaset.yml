@@ -14,7 +14,7 @@ spec:
       metadata:
         labels:
           name: nginxapp
-          app: rpcapp
+          app: rsapp
       spec:
         containers:
           - name: nginxapp
