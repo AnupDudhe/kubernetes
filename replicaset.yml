@@ -10,12 +10,13 @@ spec:
        #-  { key: app, operator: In , values: [rsapp,  new-app]}
         -  { key: app, operator: Exists , values: [new-app]}
     #matchLabels: 
+          #app: rsapp
     replicas: 4
     template:
       metadata:
         labels:
           name: nginxapp
-          app: rsapp
+          app: new-app
       spec:
         containers:
           - name: nginxapp
