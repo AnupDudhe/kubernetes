@@ -6,7 +6,7 @@ metadata:
     app: rsapp
 spec:
     selector: 
-      matchExpression:      
+      matchExpressions:      
         { key: app, operator: In ,labels: [rsapp]}
     #matchLabels: 
     replicas: 4
