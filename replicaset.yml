@@ -7,8 +7,8 @@ metadata:
 spec:
     selector: 
       matchExpressions:      
-       #-  { key: app, operator: In , values: [rsapp,  new-app]}
-        -  { key: app, operator: Exists , values: [rsapp]}
+         -  { key: app, operator: In , values: [rsapp,  new-app]}
+       # -  { key: app, operator: Exists , values: [rsapp]}
     #matchLabels: 
           #app: rsapp
     replicas: 4
