@@ -3,12 +3,12 @@ kind:  ReplicaSet
 metadata: 
   name: rs
   labels:
-    app: new-app
+    app: rsapp
 spec:
     selector: 
       matchExpressions:      
        #-  { key: app, operator: In , values: [rsapp,  new-app]}
-        -  { key: app, operator: Exists , values: [new-app]}
+        -  { key: app, operator: Exists , values: [rsapp]}
     #matchLabels: 
           #app: rsapp
     replicas: 4
@@ -16,7 +16,7 @@ spec:
       metadata:
         labels:
           name: nginxapp
-          app: new-app
+          app: rsapp
       spec:
         containers:
           - name: nginxapp
