@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind:  ReplicaSet
+metadata: 
+  name: rs
+  labels:
+    app: rsapp
+spec:
+    strategy: 
+      type: RollingUpdate
+        rollingUpdate:
+              maxSurge: 1  
+              maxUnavailable: 1 
+    selector: 
+      #matchExpressions:      
+         #  -  { key: app, operator: In , values: [rsapp,  new-app]}
+         #   -  { key: app, operator: Exists}
+      matchLabels: 
+          app: rsapp
+    replicas: 4
+    template:
+      metadata:
+        labels:
+          name: nginxapp
+          app: rsapp
+      spec:
+        containers:
+          - name: nginxapp
+            image: nginx:latest 
+            ports:
+                - containerPort: 80
+                  protocol: TCP
+                  
