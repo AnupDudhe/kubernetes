@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind:  Deployment
 metadata: 
-  name: rs
+  name: deploy
   labels:
-    app: rsapp
+    app: depapp
 spec:
     strategy:
       type: RollingUpdate
@@ -15,13 +15,13 @@ spec:
          #  -  { key: app, operator: In , values: [rsapp,  new-app]}
          #   -  { key: app, operator: Exists}
       matchLabels: 
-          app: rsapp
+          app: depapp
     replicas: 4
     template:
       metadata:
         labels:
           name: nginxapp
-          app: rsapp
+          app: depapp
       spec:
         containers:
           - name: nginxapp
