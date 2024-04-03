@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind:  ReplicaSet
+kind:  Deployment
 metadata: 
   name: rs
   labels:
     app: rsapp
 spec:
-    strategy: 
+    strategy:
       type: RollingUpdate
       rollingUpdate:
             maxSurge: 1  
