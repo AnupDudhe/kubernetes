@@ -26,5 +26,5 @@ spec:
                  - name: MYSQL_ROOT_PASSWORD
                    valueFrom:
                         configMapKeyRef:
-                        name: config
-                        key: rootpw
+                          name: config
+                          key: rootpw
