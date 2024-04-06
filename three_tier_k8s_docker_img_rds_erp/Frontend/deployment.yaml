@@ -21,7 +21,7 @@ spec:
           - name: httpdapp
             image: anupdudhe/
             ports:
-                - containerPort: 8080
+                - containerPort: 80
                   protocol: TCP
                   
 
