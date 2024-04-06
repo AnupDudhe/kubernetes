@@ -1,1 +1,27 @@
+apiVersion: apps/v1
+kind:  Deployment
+metadata: 
+  name: frontend
+  labels:
+    app: frontendapp
+spec:
+    strategy:
+      type: RollingUpdate
+    selector: 
+      matchLabels: 
+          app: frontendapp
+    replicas: 2
+    template:
+      metadata:
+        labels:
+          name: httpd
+          app: frontendapp
+      spec:
+        containers:
+          - name: httpdapp
+            image: anupdudhe/
+            ports:
+                - containerPort: 8080
+                  protocol: TCP
+                  
 
