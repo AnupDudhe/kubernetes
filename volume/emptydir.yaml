@@ -11,7 +11,7 @@ spec:
     - name: myfrontend
       image: nginx
       volumeMounts:
-      - mountPath: "/share"
+      - mountPath: "/share/mnt"
         name: mypd
       ports:
        - containerPort: 80
