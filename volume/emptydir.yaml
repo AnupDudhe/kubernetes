@@ -5,7 +5,6 @@ metadata:
 spec:
   volumes:
     - name: mypd
-      persistentVolumeClaim:
         hostpath:
             path: "/mnt/"
   containers:
