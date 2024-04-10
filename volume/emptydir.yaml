@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        hostpath:
+            path: "/mnt/"
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/share/"
+        name: mypd
+      ports:
+       - containerPort: 80
+         protocol: TCP
