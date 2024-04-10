@@ -6,12 +6,12 @@ spec:
   volumes:
     - name: mypd
       hostPath:
-          path: /mnt
+          path: /mnt/usr/share/nginx/html
   containers:
     - name: myfrontend
       image: nginx
       volumeMounts:
-      - mountPath: /share/mnt
+      - mountPath: /usr/share/nginx/html
         name: mypd
       ports:
        - containerPort: 80
