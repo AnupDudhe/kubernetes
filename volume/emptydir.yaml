@@ -5,8 +5,8 @@ metadata:
 spec:
   volumes:
     - name: mypd
-        hostpath:
-            path: "/mnt/"
+      hostpath:
+          path: "/mnt/"
   containers:
     - name: myfrontend
       image: nginx
