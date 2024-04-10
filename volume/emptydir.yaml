@@ -5,7 +5,7 @@ metadata:
 spec:
   volumes:
     - name: mypd
-      hostpath:
+      hostPath:
           path: "/mnt/"
   containers:
     - name: myfrontend
