@@ -15,14 +15,12 @@ spec:
             pathType: Prefix
             backend:
               service: frontendsrv
-                name: 
                 port:
                   number: 80
          -  path: /student
             pathType: Prefix
             backend:
               service: backendsrv
-                name: 
                 port:
                   number: 8080
   
