@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+Metadata:
+  name: pods
+  namespace: dev
+  labels:
+    app: newapp
+spec:
+  containers:
+  - name: httpd
+    image: httpd:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+Metadata:
+  name: nodeportsrv
+  namespace: dev
+  labels:
+    srv: srv1
+spec:
+  type: NodePort
+  name: srv
+  selector:
+    app: newapp
+  ports:
+  - port: 80
+    targetport: 80
+    protocol: TCP
