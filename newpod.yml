@@ -4,8 +4,8 @@ metadata:
       name: myfirstpod
 spec:
     containers: 
-        - image: nginx
-          name: ngninxcont
+        - name: ngninxcont 
+          image: nginx
           resources: 
             requests:
               cpu: "500m"
