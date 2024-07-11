@@ -5,7 +5,7 @@ metadata:
 spec:
     containers: 
         - name: ngninxcont 
-          image: nginx
+          image: nginx:latest
           resources: 
             requests:
               cpu: "500m"
