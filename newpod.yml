@@ -4,7 +4,7 @@ metadata:
       name: myfirstpod
 spec:
     containers: 
-        - name: ngninxcont 
+        - name: nginx 
           image: nginx:latest
           resources: 
             requests:
