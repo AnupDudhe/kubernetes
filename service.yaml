@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   name: nodeportsrv
 spec:
-  type: NodePort
+  type: NodePort  #LoadBalancer #ClusterIp
   selector: 
     app: new-app
   ports:
