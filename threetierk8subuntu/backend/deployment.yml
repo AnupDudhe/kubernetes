@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind:  Deployment
+metadata: 
+  name: backend
+  labels:
+    app: backendapp
+spec:
+    strategy:
+      type: RollingUpdate
+    selector: 
+      matchLabels: 
+          app: backendapp
+    replicas: 2
+    template:
+      metadata:
+        labels:
+          name: tomcat
+          app: backendapp
+      spec:
+        containers:
+          - name: tomcatapp
+            image: anupdudhe/backendrds 
+            ports:
+                - containerPort: 8080
+                  protocol: TCP
+                  
