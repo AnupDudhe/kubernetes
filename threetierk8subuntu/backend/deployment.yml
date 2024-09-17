@@ -19,7 +19,7 @@ spec:
       spec:
         containers:
           - name: tomcatapp
-            image: anupdudhe/backendrds 
+            image: anupdudhe/backendubuntu 
             ports:
                 - containerPort: 8080
                   protocol: TCP
