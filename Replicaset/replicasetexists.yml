@@ -1,7 +1,7 @@
 apiVersion: apps/v1  
 kind: ReplicaSet
 metadata: 
-      name: replicasetin
+      name: replicasetexists
       labels:
             app: replicaset2
 spec:
