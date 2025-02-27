@@ -7,7 +7,7 @@ metadata:
 spec:
     selector:
          matchExpressions:
-          - {key: app, Exist}
+          - {key: app, Exists}
     replicas: 3  #specify number of pod's replica to be created. 
     template:
           #write here your pod's script from metadata and spec.
