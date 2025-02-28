@@ -30,3 +30,5 @@ spec:
                 - containerPort: 80
                   protocol: TCP
                   
+
+#https://www.apwide.com/8-deployment-strategies-explained-and-compared/
