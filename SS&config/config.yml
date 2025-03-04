@@ -4,3 +4,5 @@ metadata:
     name: config
 data: 
     rootpw: "1234"
+
+#echo -n "your_text" | base64 
